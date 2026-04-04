@@ -49,7 +49,7 @@ export default function TripPage({ params }: { params: Promise<{ id: string }> }
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent" />
         
-        <div className="absolute bottom-16 left-0 w-full px-6 lg:px-24">
+        <div className="responsive-container relative z-10 bottom-16 h-full flex flex-col justify-end">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-wrap items-center gap-3 mb-6">
               <span className="bg-blue-600 text-white px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-[0.2em] shadow-lg shadow-blue-500/30">
@@ -70,7 +70,7 @@ export default function TripPage({ params }: { params: Promise<{ id: string }> }
       </section>
 
       {/* --- CONTENT LAYOUT --- */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-24 py-16">
+      <div className="responsive-container py-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
           
           {/* Main Content (Left) */}
@@ -80,9 +80,9 @@ export default function TripPage({ params }: { params: Promise<{ id: string }> }
             <div className="space-y-6">
               <div className="flex items-center gap-3">
                 <div className="w-1.5 h-8 bg-blue-600 rounded-full" />
-                <h2 className="text-3xl font-black text-slate-900 dark:text-white tracking-tight">{t('experienceOverview')}</h2>
+                <h2 className="text-responsive-h2 text-slate-900 dark:text-white">{t('experienceOverview')}</h2>
               </div>
-              <p className="text-slate-600 dark:text-slate-400 text-xl leading-[1.6] font-medium max-w-3xl">
+              <p className="text-responsive-body text-slate-600 dark:text-slate-400 max-w-3xl">
                 {t(tour.description)}
               </p>
             </div>

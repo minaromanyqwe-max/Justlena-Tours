@@ -301,7 +301,7 @@ export default function Log() {
           <div className="inline-block px-4 py-1.5 bg-blue-500/20 backdrop-blur-md text-blue-100 rounded-full text-[10px] md:text-xs font-bold uppercase tracking-wider mb-6 border border-white/10 animate-fade-in shadow-xl">
             {t('discoveryAwaits')}
           </div>
-          <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-white tracking-tight leading-tight mb-6 drop-shadow-2xl px-4">
+          <h1 className="text-responsive-h1 text-white mb-6 drop-shadow-2xl px-4 font-black">
             {t('exclusive')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">{t('experiences')}</span>
           </h1>
           <p className="max-w-2xl text-base md:text-xl text-white/90 font-medium leading-relaxed drop-shadow-lg mb-10">
@@ -330,7 +330,7 @@ export default function Log() {
       </div>
 
       <section className="section-padding responsive-container">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-10">
+        <div className="grid-responsive">
           {tours.filter(Boolean).map((tour) => (
             <div
               key={tour.id}

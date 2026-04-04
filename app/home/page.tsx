@@ -1,6 +1,5 @@
 import React from 'react'
-import Log from '../register/page'
-    import { Clock, MapPin, Star, Calendar, ArrowRight } from 'lucide-react';
+import { Clock, MapPin, Star, Calendar, ArrowRight } from 'lucide-react';
 
 export default function Page() {
     
@@ -284,172 +283,132 @@ export default function Page() {
     ];
     
   return (
-    <div>
+    <div className="bg-white dark:bg-slate-950 transition-colors duration-300">
 
       {/* Hero Section */}
-      <div className="relative min-h-[400px] md:h-[500px] bg-[url('/img/bg-hero.jpg')] bg-cover bg-center flex items-center">
-
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black/50"></div>
-
-        {/* Content */}
-        <div className="relative z-10 flex flex-col justify-center items-center h-full text-center text-white px-6">
-          <h1 className="text-3xl md:text-5xl font-bold mb-4">
-            Let's Make Your Best Trip Ever ✈️
+      <div className="relative h-[60vh] md:h-[80vh] w-full overflow-hidden">
+        <img 
+          src="/img/bg-hero.jpg" 
+          alt="hero" 
+          className="w-full h-full object-cover animate-image-reveal"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-white dark:to-slate-950" />
+        
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center responsive-container">
+          <h1 className="text-responsive-h1 text-white mb-6 drop-shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+            Let's Make Your <span className="text-blue-500">Best Trip</span> Ever ✈️
           </h1>
-
-          <p className="max-w-2xl text-gray-200 text-lg leading-7">
+          <p className="max-w-2xl text-responsive-body text-white/90 drop-shadow-md mb-10">
             Welcome to Red Sea Excursions. Plan and book your perfect trip with expert advice and travel tips.
-            <br />
-            <span className="block mt-3 text-sm text-gray-300">
-              Best Price Guarantee • No prepayment • Direct booking • Top rated
-            </span>
           </p>
-
-          {/* Button */}
-          <button className="mt-6 bg-blue-600 px-6 py-3 rounded-xl hover:bg-blue-700 transition">
+          <button className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-2xl font-black uppercase tracking-widest shadow-2xl shadow-blue-500/40 transition-all hover:scale-105 active:scale-95">
             Explore Trips
           </button>
         </div>
       </div>
 
-      {/* Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10">
-        <h1 className="text-2xl md:text-3xl font-bold text-center mb-8 uppercase tracking-tight">
-          Our Destinations 🌍
-        </h1>
-
-        {/* Images Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-
-          <img
-            src="/img/destination-4.jpg"
-            alt=""
-            className="w-full h-[250px] object-cover rounded-2xl shadow-md hover:scale-105 transition duration-300"
-          />
-
-          <img
-            src="/img/destination-3.jpg"
-            alt=""
-            className="w-full h-[250px] object-cover rounded-2xl shadow-md hover:scale-105 transition duration-300"
-          />
-
-          <img
-            src="/img/destination-1.jpg"
-            alt=""
-            className="w-full h-[250px] object-cover rounded-2xl shadow-md hover:scale-105 transition duration-300"
-          />
-
-          <img
-            src="/img/re1.png"
-            alt=""
-            className="w-full h-[250px] object-cover rounded-2xl shadow-md hover:scale-105 transition duration-300"
-          />
-
+      {/* Destinations Section */}
+      <section className="section-padding responsive-container">
+        <div className="flex flex-col items-center mb-16">
+          <div className="w-1.5 h-10 bg-blue-600 rounded-full mb-6" />
+          <h2 className="text-responsive-h2 text-slate-900 dark:text-white">Our Destinations 🌍</h2>
         </div>
 
-      </div>
-<br />
-    <main className="bg-slate-50 min-h-screen">
-      <section className="py-20 px-4 md:px-8 max-w-7xl mx-auto">
-
-        {/* Grid Section */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-10">
-          {tours.filter(Boolean).map((tour) => (
-            <div
-              key={tour.id}
-              className="group bg-white rounded-[2.5rem] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_50px_rgba(37,99,235,0.1)] transition-all duration-700 border border-slate-100/50 flex flex-col h-full relative"
-            >
-              {/* Image Container */}
-              <div className="relative h-64 sm:h-72 overflow-hidden">
-                <img
-                  src={tour.image}
-                  alt={tour.title}
-                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
-
-                {/* Category Badge */}
-                <div className="absolute top-5 left-5">
-                  <span className="backdrop-blur-xl bg-white/20 text-white border border-white/30 px-4 py-2 rounded-2xl text-[10px] font-black uppercase tracking-[0.1em] shadow-xl">
-                    {tour.category}
-                  </span>
-                </div>
-
-                {/* Favorite Button (Visual only) */}
-                <div className="absolute top-5 right-5">
-                  <button className="backdrop-blur-xl bg-black/20 hover:bg-white text-white hover:text-red-500 p-2.5 rounded-2xl transition-all duration-300 border border-white/20 group/fav">
-                    <Star className="w-4 h-4 group-hover/fav:fill-red-500 group-hover/fav:stroke-red-500" />
-                  </button>
-                </div>
-
-                {/* Price Tag Overlay */}
-                <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between">
-                  <div className="space-y-1">
-                    <div className="flex items-center gap-1.5">
-                      <div className="flex text-yellow-400">
-                        {[...Array(5)].map((_, i) => (
-                          <Star key={i} className={`w-3 h-3 ${i < Math.floor(tour.rating) ? 'fill-current' : ''}`} />
-                        ))}
-                      </div>
-                      <span className="text-white text-xs font-bold">{tour.rating}</span>
-                      <span className="text-white/60 text-[10px]">({tour.reviews})</span>
-                    </div>
-                  </div>
-                  <div className="bg-white/95 backdrop-blur shadow-xl px-4 py-2 rounded-2xl">
-                    <p className="text-[10px] text-slate-500 font-bold uppercase leading-none">Price</p>
-                    <p className="text-lg font-black text-blue-600 leading-none mt-1">{tour.price}</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Content Section */}
-              <div className="p-6 md:p-8 flex flex-col flex-grow relative">
-                <div className="flex items-start gap-2 text-blue-600 mb-3">
-                  <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
-                  <span className="text-[11px] font-black uppercase tracking-widest leading-tight line-clamp-1">{tour.location}</span>
-                </div>
-
-                <h3 className="text-xl md:text-2xl font-bold text-slate-800 group-hover:text-blue-600 transition-colors mb-4 leading-tight line-clamp-2">
-                  {tour.title}
-                </h3>
-
-                <div className="grid grid-cols-2 gap-3 md:gap-4 mb-6 md:mb-8">
-                  <div className="flex items-center gap-2 md:gap-2.5 p-2 md:p-3 rounded-2xl bg-slate-50 border border-slate-100 group-hover:bg-blue-50 group-hover:border-blue-100 transition-colors duration-500 font-medium">
-                    <Clock className="w-4 h-4 text-slate-400 group-hover:text-blue-500 shrink-0" />
-                    <span className="text-[10px] md:text-xs text-slate-600 group-hover:text-blue-700">{tour.duration}</span>
-                  </div>
-                  <div className="flex items-center gap-2 md:gap-2.5 p-2 md:p-3 rounded-2xl bg-slate-50 border border-slate-100 group-hover:bg-indigo-50 group-hover:border-indigo-100 transition-colors duration-500 font-medium">
-                    <Calendar className="w-4 h-4 text-slate-400 group-hover:text-indigo-500 shrink-0" />
-                    <span className="text-[10px] md:text-xs text-slate-600 group-hover:text-indigo-700 text-nowrap">Daily</span>
-                  </div>
-                </div>
-
-                {/* Action Section */}
-                <div className="mt-auto pt-6 border-t border-slate-100 flex items-center justify-between gap-3 md:gap-4 flex-wrap sm:flex-nowrap">
-                  <div className="flex -space-x-3 overflow-hidden shrink-0">
-                    {[1, 2, 3, 4].map((i) => (
-                      <div key={i} className="inline-block h-8 w-8 rounded-full ring-2 ring-white bg-slate-200 overflow-hidden">
-                        <img src={`https://i.pravatar.cc/100?img=${i + 10}`} alt="user" />
-                      </div>
-                    ))}
-                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-slate-900 text-[10px] font-bold text-white ring-2 ring-white">
-                      +12
-                    </div>
-                  </div>
-                  <button className="flex items-center justify-center gap-2 bg-slate-900 hover:bg-blue-600 text-white px-5 sm:px-6 py-3 rounded-2xl transition-all duration-300 transform hover:translate-x-1 hover:shadow-xl hover:shadow-blue-200 active:scale-95 group/btn w-full sm:w-auto">
-                    <span className="text-sm font-bold">Book Now</span>
-                    <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
-                  </button>
-                </div>
-              </div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 overflow-hidden">
+          {['destination-4.jpg', 'destination-3.jpg', 'destination-1.jpg', 're1.png'].map((img, i) => (
+            <div key={i} className="group relative h-[300px] sm:h-[400px] rounded-[2rem] sm:rounded-[3rem] overflow-hidden shadow-xl">
+              <img
+                src={`/img/${img}`}
+                alt=""
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </div>
           ))}
         </div>
       </section>
-    </main>
-  );
 
+      {/* Tours Grid Section */}
+      <main className="bg-slate-50 dark:bg-slate-900/10 min-h-screen">
+        <section className="section-padding responsive-container">
+          <div className="grid-responsive">
+            {tours.map((tour) => (
+              <div
+                key={tour.id}
+                className="group bg-white dark:bg-slate-900 rounded-[2.5rem] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_50px_rgba(37,99,235,0.1)] transition-all duration-700 border border-slate-100 dark:border-slate-800 flex flex-col h-full relative"
+              >
+                {/* Image Container */}
+                <div className="relative h-64 sm:h-72 overflow-hidden">
+                  <img
+                    src={tour.image}
+                    alt={tour.title}
+                    className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
+
+                  <div className="absolute top-5 left-5">
+                    <span className="backdrop-blur-xl bg-white/20 text-white border border-white/30 px-4 py-2 rounded-2xl text-[10px] font-black uppercase tracking-[0.1em] shadow-xl">
+                      {tour.category}
+                    </span>
+                  </div>
+
+                  <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between">
+                    <div className="space-y-1">
+                      <div className="flex items-center gap-1.5 text-white">
+                        <div className="flex text-yellow-400">
+                          {[...Array(5)].map((_, i) => (
+                            <Star key={i} className={`w-3 h-3 ${i < Math.floor(tour.rating) ? 'fill-current' : ''}`} />
+                          ))}
+                        </div>
+                        <span className="text-xs font-bold">{tour.rating}</span>
+                      </div>
+                    </div>
+                    <div className="bg-white/95 dark:bg-slate-900/95 backdrop-blur shadow-xl px-4 py-2 rounded-2xl">
+                      <p className="text-[10px] text-slate-500 dark:text-slate-400 font-bold uppercase leading-none">Price</p>
+                      <p className="text-lg font-black text-blue-600 dark:text-blue-400 leading-none mt-1">{tour.price}</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="p-8 flex flex-col flex-grow relative">
+                  <div className="flex items-start gap-2 text-blue-600 dark:text-blue-400 mb-3">
+                    <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
+                    <span className="text-[11px] font-black uppercase tracking-widest leading-tight">{tour.location}</span>
+                  </div>
+
+                  <h3 className="text-xl font-black text-slate-800 dark:text-white group-hover:text-blue-600 transition-colors mb-4 line-clamp-2 uppercase">
+                    {tour.title}
+                  </h3>
+
+                  <div className="grid grid-cols-2 gap-3 mb-8">
+                    <div className="flex items-center gap-2 p-3 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700">
+                      <Clock className="w-4 h-4 text-slate-400" />
+                      <span className="text-[10px] font-bold text-slate-600 dark:text-slate-400 uppercase">{tour.duration}</span>
+                    </div>
+                    <div className="flex items-center gap-2 p-3 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700">
+                      <Calendar className="w-4 h-4 text-slate-400" />
+                      <span className="text-[10px] font-bold text-slate-600 dark:text-slate-400 uppercase text-nowrap">Daily</span>
+                    </div>
+                  </div>
+
+                  <div className="mt-auto pt-6 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between gap-4">
+                    <div className="flex -space-x-3 overflow-hidden">
+                      {[1, 2, 3, 4].map((i) => (
+                        <div key={i} className="inline-block h-8 w-8 rounded-full ring-2 ring-white dark:ring-slate-900 bg-slate-200 overflow-hidden">
+                          <img src={`https://i.pravatar.cc/100?img=${i + 10}`} alt="user" />
+                        </div>
+                      ))}
+                    </div>
+                    <button className="flex items-center justify-center gap-2 bg-slate-900 dark:bg-blue-600 hover:bg-blue-600 text-white px-6 py-3 rounded-2xl transition-all font-bold text-sm uppercase">
+                      Book Now
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      </main>
     </div>
-  )
+  );
 }
