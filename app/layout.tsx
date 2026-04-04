@@ -18,8 +18,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Excursions & Tours",
-  description: "Book your luxury tours in Sharm El-Sheikh",
+  title: "Justlena Tours | Premium Excursions & Luxury Experiences",
+  description: "Discover the best luxury tours in Sharm El-Sheikh with Justlena Tours. Book exclusive yacht trips, desert safaris, and diving adventures with high-end concierge service.",
+  keywords: ["Justlena Tours", "Sharm El-Sheikh", "Luxury Excursions", "Desert Safari", "Diving Sharm", "Yacht Rental Sharm"],
 };
 
 export default function RootLayout({
@@ -41,11 +42,11 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <LanguageProvider>
-            <Navbar/>
+            <Navbar />
             <main className="flex-grow">
               {children}
             </main>
-            <Footer/>
+            <Footer />
             <Toaster position="top-right" richColors />
           </LanguageProvider>
         </ThemeProvider>

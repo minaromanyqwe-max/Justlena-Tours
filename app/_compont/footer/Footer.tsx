@@ -40,6 +40,24 @@ const Instagram = ({ className, size = 24 }: { className?: string; size?: number
     <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
   </svg>
 );
+// Custom WhatsApp Icon component to match Lucide style
+const WhatsApp = ({ className, size = 24 }: { className?: string; size?: number | string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+  >
+    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 1 1-7.6-7.6 8.38 8.38 0 0 1 3.8.9L22 4Z" />
+    <path d="M17 10l-2-2m0 0l-2 2m2-2v6" />
+  </svg>
+);
 
 
 import Link from "next/link";
@@ -54,17 +72,24 @@ export default function Footer() {
 
         {/* Brand */}
         <div className="space-y-6">
-          <div className="text-3xl font-black tracking-tighter flex items-center gap-2">
-            <span className="bg-blue-600 text-white p-1 rounded-lg">🌍</span>
-            SUNRISE <span className="text-blue-600">TOURS</span>
+          <div className="flex items-center gap-3 shrink-0">
+            <span className="bg-gradient-to-br from-blue-600 to-indigo-700 text-white w-10 h-10 flex items-center justify-center rounded-xl text-xl shadow-lg ring-1 ring-white/10">🌍</span>
+            <div className="flex flex-col">
+              <span className="text-2xl font-black tracking-tight leading-none text-white">
+                JUSTLENA
+              </span>
+              <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-blue-500 mt-1 leading-none">
+                Premium Tours
+              </span>
+            </div>
           </div>
           <p className="text-slate-400 text-sm leading-relaxed font-medium">
             {t('footerDesc')}
           </p>
           <div className="flex gap-4">
-            <button className="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center hover:bg-blue-600 transition-colors"><Instagram size={18} /></button>
-            <button className="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center hover:bg-blue-600 transition-colors"><Facebook size={18} /></button>
-            <button className="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center hover:bg-blue-600 transition-colors"><Share2 size={18} /></button>
+            <Link href="https://instagram.com" target="_blank" className="w-10 h-10 rounded-xl bg-slate-900 flex items-center justify-center hover:bg-blue-600 hover:scale-110 transition-all duration-300 ring-1 ring-white/5"><Instagram size={18} /></Link>
+            <Link href="https://facebook.com" target="_blank" className="w-10 h-10 rounded-xl bg-slate-900 flex items-center justify-center hover:bg-blue-600 hover:scale-110 transition-all duration-300 ring-1 ring-white/5"><Facebook size={18} /></Link>
+            <button className="w-10 h-10 rounded-xl bg-slate-900 flex items-center justify-center hover:bg-blue-600 hover:scale-110 transition-all duration-300 ring-1 ring-white/5"><Share2 size={18} /></button>
           </div>
         </div>
 
@@ -94,17 +119,23 @@ export default function Footer() {
         <div className="space-y-6">
           <h3 className="text-xs font-black uppercase tracking-[0.2em] text-blue-500">{t('connect')}</h3>
           <div className="space-y-4">
-            <div className="flex items-start gap-3 group">
-              <div className="p-2 bg-slate-900 rounded-lg group-hover:bg-blue-600/20 group-hover:text-blue-400 transition-colors"><MapPin size={16} /></div>
-              <div className="text-sm font-bold text-slate-300">{t('sharmLocation')}, <span className="block text-slate-500 text-xs mt-1">{t('sinaiEgypt')}</span></div>
+            <div className="flex items-start gap-4 group">
+              <div className="p-2.5 bg-slate-900 rounded-xl group-hover:bg-blue-600/20 group-hover:text-blue-400 transition-all border border-slate-800 shadow-sm"><MapPin size={16} /></div>
+              <div className="flex flex-col">
+                <span className="text-sm font-bold text-slate-200">{t('sharmLocation')}</span>
+                <span className="text-[10px] font-bold uppercase tracking-wider text-slate-500 mt-1">{t('sinaiEgypt')}</span>
+              </div>
             </div>
-            <div className="flex items-start gap-3 group">
-              <div className="p-2 bg-slate-900 rounded-lg group-hover:bg-blue-600/20 group-hover:text-blue-400 transition-colors"><Phone size={16} /></div>
-              <div className="text-sm font-bold text-slate-300">+20 1050017204 <span className="block text-slate-500 text-xs mt-1">{t('supportAvailable')}</span></div>
+            <div className="flex items-start gap-4 group">
+              <div className="p-2.5 bg-slate-900 rounded-xl group-hover:bg-green-600/20 group-hover:text-green-400 transition-all border border-slate-800 shadow-sm"><WhatsApp size={16} /></div>
+              <div className="flex flex-col">
+                <Link href="https://wa.me/201286887581?text=Hello%20Justlena%20Tours!" target="_blank" rel="noopener noreferrer" className="text-sm font-bold text-slate-200 hover:text-green-400 transition-colors tracking-tight">+20 12 86887581</Link>
+                <span className="text-[10px] font-bold uppercase tracking-wider text-slate-500 mt-1">{t('supportAvailable')}</span>
+              </div>
             </div>
-            <div className="flex items-start gap-3 group">
-              <div className="p-2 bg-slate-900 rounded-lg group-hover:bg-blue-600/20 group-hover:text-blue-400 transition-colors"><Mail size={16} /></div>
-              <div className="text-sm font-bold text-slate-300">bookings@sunrisetours.com</div>
+            <div className="flex items-start gap-4 group">
+              <div className="p-2.5 bg-slate-900 rounded-xl group-hover:bg-blue-600/20 group-hover:text-blue-400 transition-all border border-slate-800 shadow-sm"><Mail size={16} /></div>
+              <Link href="mailto:hanyneno70@gmail.com" className="text-sm font-bold text-slate-200 hover:text-blue-400 transition-colors py-2 tracking-tight">hanyneno70@gmail.com</Link>
             </div>
           </div>
         </div>
@@ -113,7 +144,7 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-slate-900 py-10 flex flex-col items-center justify-center gap-4 text-slate-500 text-[10px] font-black uppercase tracking-[0.3em]">
-        <span>© {new Date().getFullYear()} SUNRISE TOURS INTERNATIONAL. {t('allRightsReserved')}</span>
+        <span>© {new Date().getFullYear()} JUSTLENA TOURS INTERNATIONAL. {t('allRightsReserved')}</span>
       </div>
     </footer>
   );

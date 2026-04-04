@@ -32,9 +32,19 @@ export default function Navbar() {
       <div className="responsive-container py-3 sm:py-4 flex justify-between items-center">
 
         {/* Logo */}
-        <Link href="/" className="text-xl sm:text-2xl font-black text-blue-600 dark:text-blue-400 tracking-tighter flex items-center gap-2 shrink-0">
-          <span className="bg-blue-600 text-white p-1 rounded-lg text-lg">🌍</span>
-          SUNRISE <span className="text-slate-900 dark:text-white">TOURS</span>
+        <Link href="/" className="group flex items-center gap-3 shrink-0 translate-y-[-2px]">
+          <div className="relative">
+            <div className="absolute inset-0 bg-blue-500 blur-md opacity-20 group-hover:opacity-40 transition-opacity" />
+            <span className="relative bg-gradient-to-br from-blue-600 to-indigo-700 text-white w-10 h-10 sm:w-11 sm:h-11 flex items-center justify-center rounded-2xl text-lg sm:text-xl shadow-lg ring-1 ring-white/20 transform transition-transform group-hover:scale-110 duration-500">🌍</span>
+          </div>
+          <div className="flex flex-col">
+            <span className="text-lg sm:text-xl font-black tracking-tight leading-none bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-600 dark:from-blue-400 dark:via-indigo-400 dark:to-blue-400">
+              JUSTLENA
+            </span>
+            <span className="text-[9px] sm:text-[10px] font-bold tracking-[0.3em] uppercase text-slate-500 dark:text-slate-400 mt-1.5 leading-none">
+              Premium Tours
+            </span>
+          </div>
         </Link>
 
         {/* Links */}
@@ -93,7 +103,7 @@ export default function Navbar() {
                 {theme === 'dark' ? <Sun size={16} className="sm:w-[18px] sm:h-[18px]" /> : <Moon size={16} className="sm:w-[18px] sm:h-[18px]" />}
               </button>
             )}
-            
+
             <Link href="/register" className="hidden lg:block">
               <button className="bg-slate-900 dark:bg-blue-600 text-white px-5 xl:px-6 py-2.5 rounded-2xl text-sm font-bold shadow-lg shadow-blue-500/20 hover:scale-105 active:scale-95 transition-all uppercase whitespace-nowrap">
                 {t('bookNow')}
@@ -101,7 +111,7 @@ export default function Navbar() {
             </Link>
 
             {/* Mobile Menu Button */}
-            <button 
+            <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="lg:hidden p-2 sm:p-2.5 rounded-2xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 active:scale-95 transition-transform"
             >
@@ -142,4 +152,4 @@ export default function Navbar() {
       {isMenuOpen && <div className="fixed inset-0 z-[40]" onClick={() => setIsMenuOpen(false)} />}
     </nav>
   )
-}
+}
