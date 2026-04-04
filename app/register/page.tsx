@@ -14,7 +14,7 @@ export default function Log() {
     <main className="bg-slate-50 dark:bg-slate-950 min-h-screen transition-colors duration-300">
       {/* Premium Hero Section */}
       <div className="relative w-full h-[80vh] overflow-hidden group">
-        <Image 
+        <Image
           src="/img/re6.jpg"
           alt="Hero"
           fill
@@ -96,10 +96,6 @@ export default function Log() {
                       <span className="text-white/60 text-[10px]">({tour.reviews})</span>
                     </div>
                   </div>
-                  <div className="bg-white/95 dark:bg-slate-900/95 backdrop-blur shadow-xl px-4 py-2 rounded-2xl border border-white/50 dark:border-slate-800">
-                    <p className="text-[10px] text-slate-500 dark:text-slate-400 font-bold uppercase leading-none">{t('priceText')}</p>
-                    <p className="text-lg font-black text-blue-600 dark:text-blue-400 leading-none mt-1">{tour.price}</p>
-                  </div>
                 </div>
               </div>
 
@@ -129,9 +125,9 @@ export default function Log() {
                     <div className="flex -space-x-3 overflow-hidden">
                       {[1, 2, 3, 4].map((i) => (
                         <div key={i} className="inline-block h-8 w-8 rounded-full ring-2 ring-white dark:ring-slate-900 bg-slate-200 dark:bg-slate-700 overflow-hidden shrink-0 transition-transform hover:scale-110 hover:z-10 cursor-pointer relative">
-                          <Image 
-                            src={`https://i.pravatar.cc/100?img=${i + 15}`} 
-                            alt="user" 
+                          <Image
+                            src={`https://i.pravatar.cc/100?img=${i + 15}`}
+                            alt="user"
                             fill
                             unoptimized
                             className="object-cover"
