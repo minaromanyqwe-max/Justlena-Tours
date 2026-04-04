@@ -19,7 +19,7 @@ export default function AboutPage() {
           <div className="inline-block px-4 py-1.5 bg-blue-500/20 backdrop-blur-md text-blue-100 rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-8 border border-white/10 animate-fade-in shadow-xl">
             {t('ourStory')}
           </div>
-          <h1 className="text-4xl md:text-8xl font-black text-white leading-[0.9] tracking-tighter mb-8 drop-shadow-2xl uppercase">
+          <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-white leading-[0.9] tracking-tighter mb-8 drop-shadow-2xl uppercase">
             {t('makingEveryMoment')}
           </h1>
           <p className="text-xl md:text-2xl text-white/90 font-medium max-w-2xl leading-relaxed">
@@ -29,8 +29,7 @@ export default function AboutPage() {
       </div>
 
       {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-24 py-24">
-
+      <div className="section-padding responsive-container">
         <div className="grid lg:grid-cols-2 gap-20 items-center mb-32">
           <div className="space-y-8">
             <div className="flex items-center gap-3">

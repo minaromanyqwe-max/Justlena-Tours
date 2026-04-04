@@ -297,11 +297,11 @@ export default function Log() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-slate-900/40 to-slate-50 dark:to-slate-950" />
         
-        <div className="relative h-full max-w-7xl mx-auto px-4 md:px-8 flex flex-col items-center justify-center text-center py-20">
+        <div className="relative h-full responsive-container flex flex-col items-center justify-center text-center py-20">
           <div className="inline-block px-4 py-1.5 bg-blue-500/20 backdrop-blur-md text-blue-100 rounded-full text-[10px] md:text-xs font-bold uppercase tracking-wider mb-6 border border-white/10 animate-fade-in shadow-xl">
             {t('discoveryAwaits')}
           </div>
-          <h1 className="text-4xl md:text-8xl font-black text-white tracking-tight leading-tight mb-6 drop-shadow-2xl">
+          <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-white tracking-tight leading-tight mb-6 drop-shadow-2xl px-4">
             {t('exclusive')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">{t('experiences')}</span>
           </h1>
           <p className="max-w-2xl text-base md:text-xl text-white/90 font-medium leading-relaxed drop-shadow-lg mb-10">
@@ -329,7 +329,7 @@ export default function Log() {
         </div>
       </div>
 
-      <section className="py-20 px-4 md:px-8 max-w-7xl mx-auto">
+      <section className="section-padding responsive-container">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-10">
           {tours.filter(Boolean).map((tour) => (
             <div

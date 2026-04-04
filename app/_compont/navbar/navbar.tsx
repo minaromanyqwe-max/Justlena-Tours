@@ -29,7 +29,7 @@ export default function Navbar() {
 
   return (
     <nav className="bg-white/80 dark:bg-slate-950/80 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-slate-200 dark:border-slate-800 transition-colors duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+      <div className="responsive-container py-4 flex justify-between items-center">
 
         {/* Logo */}
         <Link href="/" className="text-2xl font-black text-blue-600 dark:text-blue-400 tracking-tighter flex items-center gap-2">
