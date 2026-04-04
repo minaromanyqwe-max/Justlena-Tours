@@ -1,11 +1,10 @@
 import Image from "next/image";
-import Product from "./product/page";
+import Login from "./register/page";
 
 export default function Home() {
   return (
     <>
-    <Product/>
-
+    <Login/>
     </>
   );
 }
