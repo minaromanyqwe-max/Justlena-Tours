@@ -1,8 +1,8 @@
-import { 
-  Waves, Bike, Wind, History, Palmtree, 
-  Utensils, Info, ShieldCheck, MapPin, 
-  Calendar, Clock, CreditCard, CheckCircle, XCircle, 
-  Shirt, Coffee, Ghost, Image, Footprints, Flame 
+import {
+  Waves, Bike, Wind, History, Palmtree,
+  Utensils, Info, ShieldCheck, MapPin,
+  Calendar, Clock, CreditCard, CheckCircle, XCircle,
+  Shirt, Coffee, Ghost, Image, Footprints, Flame
 } from 'lucide-react';
 
 export interface TourDetail {
@@ -15,9 +15,11 @@ export interface TourDetail {
   duration: string;
   program: { t: string; a: string }[];
   prices: {
-    adult: string;
-    child: string;
-    under5: string;
+    adult?: string;
+    child?: string;
+    under5?: string;
+    Single?: string;
+    Double?: string;
     additional?: { label: string; price: string }[];
   };
   included: string[];
@@ -42,7 +44,7 @@ export const toursDetail: Record<number, TourDetail> = {
       { t: "01:30 PM", a: "White Island Visit" },
       { t: "05:00 PM", a: "Return to Port" }
     ],
-    prices: { adult: "$23", child: "$10", under5: "FREE" },
+    prices: { adult: "$35", child: "$20", under5: "FREE", additional: [{ label: "Diving", price: "$12" }] },
     included: ["Hotel Transfer", "Lunch on Yacht", "Soft Drinks", "Professional Guide"],
     notIncluded: ["Snorkeling Gear", "Diving Gear", "Personal Expenses"],
     needs: ["Passport", "Swimwear", "Towel", "Sunscreen"],
@@ -61,8 +63,8 @@ export const toursDetail: Record<number, TourDetail> = {
       { t: "Daytime", a: "08:30 AM" },
       { t: "Sunset", a: "03:30 PM" }
     ],
-    prices: { adult: "$15 (Single)", child: "$19 (Double)", under5: "N/A", additional: [{label: "Private", price: "+$10"}] },
-    included: ["Hotel Transfer", "Quad & Camel ride", "Bedouin Tea"],
+    prices: { Single: "$18 ", Double: "$24 ", additional: [{ label: "Private", price: "+$15" }] },
+    included: ["Hotel Transfer", "Quad ", "Bedouin Tea"],
     notIncluded: ["Scarf", "Goggles", "Photos"],
     needs: ["Sunglasses", "Scarf", "Wet wipes"],
     additionalInfo: ["Safety briefing included", "No child discount"]
@@ -83,7 +85,7 @@ export const toursDetail: Record<number, TourDetail> = {
       { t: "01:30 PM", a: "Lunch at Sea" },
       { t: "03:00 PM", a: "Canyon Walk" }
     ],
-    prices: { adult: "$20", child: "$9", under5: "FREE" },
+    prices: { adult: "$20", child: "$10", under5: "FREE" },
     included: ["Transfer", "Guide", "ATV & Camel", "Lunch"],
     notIncluded: ["Gear Rental", "Drinks during lunch"],
     needs: ["Passport", "Water", "Towel"],
@@ -98,12 +100,9 @@ export const toursDetail: Record<number, TourDetail> = {
     image: "/img/re4.jpg",
     duration: "4 Hours",
     program: [
-      { t: "06:00 PM", a: "Transfer" },
-      { t: "07:00 PM", a: "Sailing" },
-      { t: "08:00 PM", a: "Dinner & Show" },
-      { t: "10:00 PM", a: "Return" }
+      { t: "05:00 PM", a: "10:00 PM" },
     ],
-    prices: { adult: "$22", child: "$11", under5: "FREE" },
+    prices: { adult: "$35", child: "$18(6-11 years)", under5: "FREE" },
     included: ["Transfer", "Dinner", "Soft Drinks", "Show"],
     notIncluded: ["Fresh Juice", "Photos"],
     needs: ["Camera", "Warm clothes"],
@@ -122,7 +121,7 @@ export const toursDetail: Record<number, TourDetail> = {
       { t: "11:30 AM", a: "Instruction" },
       { t: "12:00 PM", a: "Diving Session" }
     ],
-    prices: { adult: "$20", child: "N/A", under5: "N/A" },
+    prices: { adult: "$25", child: "N/A", under5: "N/A" },
     included: ["Transfer", "Instructor", "Equipment"],
     notIncluded: ["Photos", "Drinks"],
     needs: ["Passport", "Towel"],
@@ -142,7 +141,7 @@ export const toursDetail: Record<number, TourDetail> = {
       { t: "11:00 AM", a: "Snorkeling" },
       { t: "02:00 PM", a: "Return" }
     ],
-    prices: { adult: "$18", child: "$9", under5: "FREE" },
+    prices: { adult: "$20", child: "$10", under5: "FREE" },
     included: ["Transfer", "Guide", "Entrance Fee"],
     notIncluded: ["Gear Rental"],
     needs: ["Sunscreen", "Water"],
@@ -161,7 +160,7 @@ export const toursDetail: Record<number, TourDetail> = {
       { t: "11:30 AM", a: "Dive Session" },
       { t: "12:30 PM", a: "Water Activities" }
     ],
-    prices: { adult: "$35", child: "$35", under5: "N/A" },
+    prices: { adult: "$45", child: "$45", under5: "N/A" },
     included: ["Transfer", "Dive Gear", "Banana & Parasail"],
     notIncluded: ["Drinks"],
     needs: ["Towel", "Swimwear"],
@@ -181,7 +180,7 @@ export const toursDetail: Record<number, TourDetail> = {
       { t: "12:30 PM", a: "Lunch" },
       { t: "05:00 PM", a: "Return" }
     ],
-    prices: { adult: "$28", child: "$15", under5: "FREE" },
+    prices: { adult: "$35", child: "$20", under5: "FREE", additional: [{ label: "Diving", price: "$12" }] },
     included: ["Lunch", "Soft Drinks", "Guide"],
     notIncluded: ["Gear Rent"],
     needs: ["Passport Copy"],
@@ -201,7 +200,7 @@ export const toursDetail: Record<number, TourDetail> = {
       { t: "12:00 PM", a: "Pyramids" },
       { t: "01:00 AM", a: "Arrival Back" }
     ],
-    prices: { adult: "$55", child: "$50", under5: "FREE ($15 seat)" },
+    prices: { adult: "$55", child: "$45", under5: "FREE ($15 seat)" },
     included: ["Tickets", "Lunch", "Guide", "Transport"],
     notIncluded: ["Nile Boat", "Visa"],
     needs: ["Passport with Visa", "Warm clothes"],
@@ -221,7 +220,7 @@ export const toursDetail: Record<number, TourDetail> = {
       { t: "05:00 AM", a: "Sunrise" },
       { t: "08:00 AM", a: "Monastery" }
     ],
-    prices: { adult: "$24", child: "$12", under5: "N/A" },
+    prices: { adult: "$30", child: "$15", under5: "N/A" },
     included: ["Transfer", "Guide", "Entry"],
     notIncluded: ["Camel", "Blanket"],
     needs: ["Passport", "Warm clothes"],
@@ -240,7 +239,7 @@ export const toursDetail: Record<number, TourDetail> = {
       { t: "10:00 AM", a: "Tour" },
       { t: "11:30 AM", a: "Back" }
     ],
-    prices: { adult: "$20", child: "$10", under5: "FREE" },
+    prices: { adult: "$30", child: "$15 (5-11 years)", under5: "FREE" },
     included: ["Transfer", "Boarding"],
     notIncluded: ["Photos"],
     needs: ["Camera"],
@@ -260,7 +259,7 @@ export const toursDetail: Record<number, TourDetail> = {
       { t: "12:30 PM", a: "Lunch" },
       { t: "04:00 PM", a: "Home" }
     ],
-    prices: { adult: "$24", child: "$12", under5: "FREE" },
+    prices: { adult: "$30", child: "$15", under5: "FREE" },
     included: ["Transfer", "Lunch", "Tickets"],
     notIncluded: ["Drinks"],
     needs: ["Passport", "Modest clothes"],
@@ -487,7 +486,7 @@ export const toursDetail: Record<number, TourDetail> = {
       { t: "Various", a: "Pickup" },
       { t: "15/30m", a: "Swim" }
     ],
-    prices: { adult: "$65 (15m)", child: "$65", under5: "N/A", additional: [{label: "30 Mins", price: "$85"}] },
+    prices: { adult: "$65 (15m)", child: "$65", under5: "N/A", additional: [{ label: "30 Mins", price: "$85" }] },
     included: ["Transfer", "Shared Swim"],
     notIncluded: ["Photos"],
     needs: ["Swimwear", "Towel"],

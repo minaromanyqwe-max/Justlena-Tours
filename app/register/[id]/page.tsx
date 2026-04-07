@@ -177,7 +177,7 @@ export default function TripPage({ params }: { params: Promise<{ id: string }> }
                 <div className="flex items-center justify-between mb-8">
                   <div>
                     <span className="text-[10px] text-slate-400 font-black uppercase tracking-widest leading-none">{t('priceStartingFrom')}</span>
-                    <div className="text-4xl font-black text-slate-900 dark:text-white mt-1">{tour.prices.adult}</div>
+                    <div className="text-4xl font-black text-slate-900 dark:text-white mt-1">{tour.prices.adult || tour.prices.Single || tour.prices.child || ""}</div>
                   </div>
                   <div className="bg-yellow-400/10 text-yellow-600 p-3 rounded-2xl">
                     <Star size={24} fill="currentColor" />
@@ -185,24 +185,46 @@ export default function TripPage({ params }: { params: Promise<{ id: string }> }
                 </div>
 
                 <div className="space-y-4 mb-8">
-                  <div className="flex justify-between items-center p-4 bg-slate-50 dark:bg-slate-800/50 rounded-2xl border border-slate-100 dark:border-slate-800">
-                    <div className="flex items-center gap-3">
-                      <div className="p-2 bg-white dark:bg-slate-800 rounded-xl shadow-sm text-blue-600 dark:text-blue-400"><Users size={16} /></div>
-                      <span className="text-sm font-bold text-slate-700 dark:text-slate-300">{t('adults')}</span>
+                  {tour.prices.adult && (
+                    <div className="flex justify-between items-center p-4 bg-slate-50 dark:bg-slate-800/50 rounded-2xl border border-slate-100 dark:border-slate-800">
+                      <div className="flex items-center gap-3">
+                        <div className="p-2 bg-white dark:bg-slate-800 rounded-xl shadow-sm text-blue-600 dark:text-blue-400"><Users size={16} /></div>
+                        <span className="text-sm font-bold text-slate-700 dark:text-slate-300">{t('adults')}</span>
+                      </div>
+                      <span className="font-black text-slate-900 dark:text-white">{tour.prices.adult}</span>
                     </div>
-                    <span className="font-black text-slate-900 dark:text-white">{tour.prices.adult}</span>
-                  </div>
-                  <div className="flex justify-between items-center p-4 bg-slate-50 dark:bg-slate-800/50 rounded-2xl border border-slate-100 dark:border-slate-800">
-                    <div className="flex items-center gap-3">
-                      <div className="p-2 bg-white dark:bg-slate-800 rounded-xl shadow-sm text-pink-600 dark:text-pink-400"><Users size={16} /></div>
-                      <span className="text-sm font-bold text-slate-700 dark:text-slate-300">{t('child')}</span>
+                  )}
+                  {tour.prices.child && (
+                    <div className="flex justify-between items-center p-4 bg-slate-50 dark:bg-slate-800/50 rounded-2xl border border-slate-100 dark:border-slate-800">
+                      <div className="flex items-center gap-3">
+                        <div className="p-2 bg-white dark:bg-slate-800 rounded-xl shadow-sm text-pink-600 dark:text-pink-400"><Users size={16} /></div>
+                        <span className="text-sm font-bold text-slate-700 dark:text-slate-300">{t('child')}</span>
+                      </div>
+                      <span className="font-black text-slate-900 dark:text-white">{tour.prices.child}</span>
                     </div>
-                    <span className="font-black text-slate-900 dark:text-white">{tour.prices.child}</span>
-                  </div>
-                  {tour.prices.under5 !== 'N/A' && (
+                  )}
+                  {tour.prices.Single && (
+                    <div className="flex justify-between items-center p-4 bg-slate-50 dark:bg-slate-800/50 rounded-2xl border border-slate-100 dark:border-slate-800">
+                      <div className="flex items-center gap-3">
+                        <div className="p-2 bg-white dark:bg-slate-800 rounded-xl shadow-sm text-emerald-600 dark:text-emerald-400"><Users size={16} /></div>
+                        <span className="text-sm font-bold text-slate-700 dark:text-slate-300">{t('Single')}</span>
+                      </div>
+                      <span className="font-black text-slate-900 dark:text-white">{tour.prices.Single}</span>
+                    </div>
+                  )}
+                  {tour.prices.Double && (
+                    <div className="flex justify-between items-center p-4 bg-slate-50 dark:bg-slate-800/50 rounded-2xl border border-slate-100 dark:border-slate-800">
+                      <div className="flex items-center gap-3">
+                        <div className="p-2 bg-white dark:bg-slate-800 rounded-xl shadow-sm text-purple-600 dark:text-purple-400"><Users size={16} /></div>
+                        <span className="text-sm font-bold text-slate-700 dark:text-slate-300">{t('Double')}</span>
+                      </div>
+                      <span className="font-black text-slate-900 dark:text-white">{tour.prices.Double}</span>
+                    </div>
+                  )}
+                  {tour.prices.under5 && tour.prices.under5 !== 'N/A' && (
                     <div className="flex justify-between items-center p-4 bg-emerald-50/50 dark:bg-emerald-900/10 rounded-2xl border border-emerald-100 dark:border-emerald-900/20">
                       <span className="text-sm font-bold text-emerald-800 dark:text-emerald-400">{t('under5')}</span>
-                      <span className="font-black text-emerald-600 uppercase tracking-widest text-xs uppercase tracking-widest">{tour.prices.under5}</span>
+                      <span className="font-black text-emerald-600 uppercase tracking-widest text-xs">{tour.prices.under5}</span>
                     </div>
                   )}
                   {tour.prices.additional?.map((add, idx) => (
