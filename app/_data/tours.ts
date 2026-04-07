@@ -274,5 +274,38 @@ export const tours: Tour[] = [
     price: "$40",
     rating: 4.5,
     reviews: 56
+  },
+  {
+    id: 25,
+    image: "/img/re25.jpg",
+    category: "Adventure",
+    title: "Safari & Canyon Explorer",
+    location: "Sinai Desert Peaks",
+    duration: "6 Hours",
+    price: "$45",
+    rating: 4.6,
+    reviews: 60
+  },
+  {
+    id: 26,
+    image: "/img/re26.jpg",
+    category: "Sea Trip",
+    title: "Red Sea Snorkeling Yacht",
+    location: "Sharm Coastline",
+    duration: "7 Hours",
+    price: "$50",
+    rating: 4.8,
+    reviews: 90
+  },
+  {
+    id: 27,
+    image: "/img/res27.jpeg",
+    category: "Full Day",
+    title: "Super Dahab Discovery 5-in-1",
+    location: "Dahab & Blue Hole",
+    duration: "9 Hours",
+    price: "$65",
+    rating: 4.7,
+    reviews: 85
   }
 ];
