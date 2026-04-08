@@ -35,7 +35,7 @@ export const tours: Tour[] = [
   },
   {
     id: 3,
-    image: "/img/re3.jpg",
+    image: "/img/res27.jpg",
     category: "Full Day",
     title: "Super Dahab Discovery 5-in-1",
     location: "Dahab & Blue Hole",
@@ -73,9 +73,9 @@ export const tours: Tour[] = [
     title: "Ras Mohammed National Park",
     location: "South Sinai Reserve",
     duration: "6 Hours",
-    price: "$40",
-    rating: 4.5,
-    reviews: 56
+    price: "$45",
+    rating: 4.8,
+    reviews: 156
   },
   {
     id: 7,
@@ -84,9 +84,9 @@ export const tours: Tour[] = [
     title: "Diving & Fun Experience",
     location: "Coral Reef Sanctuary",
     duration: "2 Hours",
-    price: "$40",
-    rating: 4.5,
-    reviews: 56
+    price: "$30",
+    rating: 4.7,
+    reviews: 89
   },
   {
     id: 8,
@@ -95,9 +95,9 @@ export const tours: Tour[] = [
     title: "Tiran Island Yacht Excursion",
     location: "Sharm Coastline",
     duration: "9 Hours",
-    price: "$40",
-    rating: 4.5,
-    reviews: 56
+    price: "$50",
+    rating: 4.9,
+    reviews: 204
   },
   {
     id: 9,
@@ -106,9 +106,9 @@ export const tours: Tour[] = [
     title: "Cairo & Pyramids Discovery",
     location: "Giza Plateau, Cairo",
     duration: "24 Hours",
-    price: "$40",
-    rating: 4.5,
-    reviews: 56
+    price: "$110",
+    rating: 4.8,
+    reviews: 312
   },
   {
     id: 10,
@@ -117,9 +117,9 @@ export const tours: Tour[] = [
     title: "Mount Moses & St. Catherine",
     location: "Sinai Holy Mountains",
     duration: "17 Hours",
-    price: "$40",
-    rating: 4.5,
-    reviews: 56
+    price: "$45",
+    rating: 4.6,
+    reviews: 142
   },
   {
     id: 11,
@@ -130,7 +130,7 @@ export const tours: Tour[] = [
     duration: "2 Hours",
     price: "$40",
     rating: 4.5,
-    reviews: 56
+    reviews: 118
   },
   {
     id: 12,
@@ -139,9 +139,9 @@ export const tours: Tour[] = [
     title: "St. Catherine's Monastery",
     location: "Heritage Landmark",
     duration: "10 Hours",
-    price: "$40",
-    rating: 4.5,
-    reviews: 56
+    price: "$35",
+    rating: 4.7,
+    reviews: 95
   },
   {
     id: 13,
@@ -150,9 +150,9 @@ export const tours: Tour[] = [
     title: "Colored Canyon Salama 5-in-1",
     location: "Nuiba Natural Canyons",
     duration: "9 Hours",
-    price: "$40",
-    rating: 4.5,
-    reviews: 56
+    price: "$55",
+    rating: 4.8,
+    reviews: 176
   },
   {
     id: 14,
@@ -161,9 +161,9 @@ export const tours: Tour[] = [
     title: "Buggy Safari & Camel Trek",
     location: "Sinai Desert Peaks",
     duration: "2.5 Hours",
-    price: "$40",
-    rating: 4.5,
-    reviews: 56
+    price: "$35",
+    rating: 4.9,
+    reviews: 220
   },
   {
     id: 15,
@@ -172,9 +172,9 @@ export const tours: Tour[] = [
     title: "Dahab Discovery Special",
     location: "Blue Hole Lagoon",
     duration: "9 Hours",
-    price: "$40",
-    rating: 4.5,
-    reviews: 56
+    price: "$45",
+    rating: 4.7,
+    reviews: 134
   },
   {
     id: 16,
@@ -183,9 +183,9 @@ export const tours: Tour[] = [
     title: "Cairo & Pyramids by Plane",
     location: "Ancient World Wonders",
     duration: "17 Hours",
-    price: "$40",
-    rating: 4.5,
-    reviews: 56
+    price: "$220",
+    rating: 4.9,
+    reviews: 415
   },
   {
     id: 17,
@@ -194,9 +194,9 @@ export const tours: Tour[] = [
     title: "Super Safari Dinner & Show",
     location: "Bedouin Nights Village",
     duration: "5 Hours",
-    price: "$40",
-    rating: 4.5,
-    reviews: 56
+    price: "$30",
+    rating: 4.6,
+    reviews: 280
   },
   {
     id: 18,
@@ -205,9 +205,9 @@ export const tours: Tour[] = [
     title: "Albatross Waterpark Day",
     location: "Sharm Fun Center",
     duration: "7 Hours",
-    price: "$40",
-    rating: 4.5,
-    reviews: 56
+    price: "$45",
+    rating: 4.8,
+    reviews: 198
   },
   {
     id: 19,
@@ -216,9 +216,9 @@ export const tours: Tour[] = [
     title: "Luxor Ancient Ruins Trip",
     location: "Upper Egypt Heritage",
     duration: "17 Hours",
-    price: "$40",
-    rating: 4.5,
-    reviews: 56
+    price: "$130",
+    rating: 4.7,
+    reviews: 245
   },
   {
     id: 20,
@@ -227,9 +227,9 @@ export const tours: Tour[] = [
     title: "Parasailing High Experience",
     location: "Red Sea Coast",
     duration: "1.5 Hours",
-    price: "$40",
-    rating: 4.5,
-    reviews: 56
+    price: "$25",
+    rating: 4.8,
+    reviews: 165
   },
   {
     id: 21,
@@ -238,9 +238,9 @@ export const tours: Tour[] = [
     title: "Petra Treasury - Jordan",
     location: "Ancient Rose City",
     duration: "24 Hours",
-    price: "$40",
-    rating: 4.5,
-    reviews: 56
+    price: "$280",
+    rating: 4.9,
+    reviews: 310
   },
   {
     id: 22,
@@ -249,9 +249,9 @@ export const tours: Tour[] = [
     title: "Turkish Bath & Massage",
     location: "Sharm Relaxation Spa",
     duration: "2.5 Hours",
-    price: "$40",
+    price: "$30",
     rating: 4.5,
-    reviews: 56
+    reviews: 88
   },
   {
     id: 23,
@@ -260,9 +260,9 @@ export const tours: Tour[] = [
     title: "Dolphinarium Fun Show",
     location: "Sharm Dolphin Park",
     duration: "1.5 Hours",
-    price: "$40",
-    rating: 4.5,
-    reviews: 56
+    price: "$20",
+    rating: 4.7,
+    reviews: 215
   },
   {
     id: 24,
@@ -271,41 +271,8 @@ export const tours: Tour[] = [
     title: "Swimming with Dolphins",
     location: "Marine Life Lagoon",
     duration: "2 Hours",
-    price: "$40",
-    rating: 4.5,
-    reviews: 56
-  },
-  {
-    id: 25,
-    image: "/img/re25.jpg",
-    category: "Adventure",
-    title: "Safari & Canyon Explorer",
-    location: "Sinai Desert Peaks",
-    duration: "6 Hours",
-    price: "$45",
-    rating: 4.6,
-    reviews: 60
-  },
-  {
-    id: 26,
-    image: "/img/re26.jpg",
-    category: "Sea Trip",
-    title: "Red Sea Snorkeling Yacht",
-    location: "Sharm Coastline",
-    duration: "7 Hours",
-    price: "$50",
-    rating: 4.8,
-    reviews: 90
-  },
-  {
-    id: 27,
-    image: "/img/res27.jpeg",
-    category: "Full Day",
-    title: "Super Dahab Discovery 5-in-1",
-    location: "Dahab & Blue Hole",
-    duration: "9 Hours",
-    price: "$65",
-    rating: 4.7,
-    reviews: 85
+    price: "$80",
+    rating: 4.9,
+    reviews: 340
   }
 ];

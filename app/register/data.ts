@@ -298,7 +298,7 @@ export const toursDetail: Record<number, TourDetail> = {
       { t: "+1h", a: "Ride" },
       { t: "+2h", a: "Tea" }
     ],
-    prices: { adult: "$30", child: "N/A", under5: "N/A" },
+    prices: { adult: "$35", child: "N/A", under5: "N/A" },
     included: ["Transfer", "Buggy", "Tea"],
     notIncluded: ["Photos"],
     needs: ["Scarf", "Goggles"],
@@ -317,7 +317,7 @@ export const toursDetail: Record<number, TourDetail> = {
       { t: "10:30 AM", a: "Activity" },
       { t: "06:00 PM", a: "Back" }
     ],
-    prices: { adult: "$15", child: "$7", under5: "FREE" },
+    prices: { adult: "$15", child: "$8", under5: "FREE" },
     included: ["Transfer", "Activity", "Lunch"],
     notIncluded: ["Drinks"],
     needs: ["Passport"],
@@ -336,7 +336,7 @@ export const toursDetail: Record<number, TourDetail> = {
       { t: "06:00 AM", a: "Flight" },
       { t: "05:00 PM", a: "Back" }
     ],
-    prices: { adult: "$195", child: "$185", under5: "FREE" },
+    prices: { adult: "$210", child: "$200", under5: "FREE" },
     included: ["Flights", "Tickets", "Lunch"],
     notIncluded: ["Drinks"],
     needs: ["Passport", "Snacks"],
@@ -355,7 +355,7 @@ export const toursDetail: Record<number, TourDetail> = {
       { t: "06:00 PM", a: "Safari" },
       { t: "07:30 PM", a: "Dinner/Show" }
     ],
-    prices: { adult: "$20", child: "N/A", under5: "N/A" },
+    prices: { adult: "$25", child: "N/A", under5: "N/A" },
     included: ["Transfer", "Safari", "Dinner"],
     notIncluded: ["Drinks"],
     needs: ["Warm clothes"],
@@ -373,7 +373,7 @@ export const toursDetail: Record<number, TourDetail> = {
       { t: "10:00 AM", a: "Pickup" },
       { t: "05:00 PM", a: "Return" }
     ],
-    prices: { adult: "$38", child: "$19", under5: "FREE" },
+    prices: { adult: "$45", child: "$23", under5: "FREE" },
     included: ["Transfer", "All slides"],
     notIncluded: ["Lunch (+$10)"],
     needs: ["Swimwear", "Towel"],
@@ -392,7 +392,7 @@ export const toursDetail: Record<number, TourDetail> = {
       { t: "06:00 AM", a: "Flight" },
       { t: "09:00 PM", a: "Back" }
     ],
-    prices: { adult: "$225", child: "$215", under5: "FREE" },
+    prices: { adult: "$235", child: "$225", under5: "FREE" },
     included: ["Flights", "Tickets", "Lunch"],
     notIncluded: ["Banana Island (+$20)"],
     needs: ["Passport"],
@@ -411,7 +411,7 @@ export const toursDetail: Record<number, TourDetail> = {
       { t: "Boat", a: "Sailing" },
       { t: "Fly", a: "7 mins flight" }
     ],
-    prices: { adult: "$20", child: "$20", under5: "N/A" },
+    prices: { Single: "$30", Double: "$40", under5: "N/A" },
     included: ["Transfer", "Safety Gear"],
     notIncluded: ["Photos"],
     needs: ["Swimwear"],
@@ -449,7 +449,7 @@ export const toursDetail: Record<number, TourDetail> = {
       { t: "Spa", a: "Peeling/Mask" },
       { t: "Massage", a: "30 mins oils" }
     ],
-    prices: { adult: "$30", child: "$20", under5: "FREE" },
+    prices: { adult: "$35", child: "$20", under5: "FREE" },
     included: ["Transfer", "All Spa steps", "Massage"],
     notIncluded: ["Fresh Drinks"],
     needs: ["Swimwear"],
@@ -486,7 +486,7 @@ export const toursDetail: Record<number, TourDetail> = {
       { t: "Various", a: "Pickup" },
       { t: "15/30m", a: "Swim" }
     ],
-    prices: { adult: "$65 (15m)", child: "$65", under5: "N/A", additional: [{ label: "30 Mins", price: "$85" }] },
+    prices: { adult: "$70 (15m)", child: "$70", under5: "N/A", additional: [{ label: "30 Mins", price: "$85" }] },
     included: ["Transfer", "Shared Swim"],
     notIncluded: ["Photos"],
     needs: ["Swimwear", "Towel"],
