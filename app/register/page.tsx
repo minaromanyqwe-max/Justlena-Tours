@@ -72,9 +72,12 @@ export default function Log() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
 
-                <div className="absolute top-5 left-5">
+                <div className="absolute top-5 left-5 flex flex-col gap-2 items-start">
                   <span className="backdrop-blur-xl bg-white/20 text-white border border-white/30 px-4 py-2 rounded-2xl text-[10px] font-black uppercase tracking-[0.1em] shadow-xl">
                     {t(tour.category)}
+                  </span>
+                  <span className="backdrop-blur-xl bg-blue-600/80 text-white border border-blue-400/30 px-3 py-1.5 rounded-xl text-sm font-black shadow-xl">
+                    {tour.price}
                   </span>
                 </div>
 

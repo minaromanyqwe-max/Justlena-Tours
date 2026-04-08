@@ -18,7 +18,7 @@ export const tours: Tour[] = [
     title: "Ras Mohammed Yacht Experience",
     location: "Sharm El-Shaikh Islands",
     duration: "9 Hours",
-    price: "$55",
+    price: "$35",
     rating: 4.9,
     reviews: 124
   },
@@ -29,7 +29,7 @@ export const tours: Tour[] = [
     title: "Quad Bike Safari & Camel Ride",
     location: "Desert Park, Sharm",
     duration: "2.5 Hours",
-    price: "$35",
+    price: "$18",
     rating: 4.8,
     reviews: 98
   },
@@ -40,7 +40,7 @@ export const tours: Tour[] = [
     title: "Super Dahab Discovery 5-in-1",
     location: "Dahab & Blue Hole",
     duration: "9 Hours",
-    price: "$65",
+    price: "$20",
     rating: 4.7,
     reviews: 85
   },
@@ -51,7 +51,7 @@ export const tours: Tour[] = [
     title: "VIP Pirate Ship Evening Cruise",
     location: "Sharm MarinaPort",
     duration: "5 Hours",
-    price: "$75",
+    price: "$35",
     rating: 4.9,
     reviews: 210
   },
@@ -62,7 +62,7 @@ export const tours: Tour[] = [
     title: "Shore Diving Adventure",
     location: "Naama Bay Marine Area",
     duration: "1.5 Hours",
-    price: "$45",
+    price: "$25",
     rating: 4.6,
     reviews: 42
   },
@@ -73,9 +73,9 @@ export const tours: Tour[] = [
     title: "Ras Mohammed National Park",
     location: "South Sinai Reserve",
     duration: "6 Hours",
-    price: "$45",
-    rating: 4.8,
-    reviews: 156
+    price: "$20",
+    rating: 4.5,
+    reviews: 56
   },
   {
     id: 7,
@@ -84,9 +84,9 @@ export const tours: Tour[] = [
     title: "Diving & Fun Experience",
     location: "Coral Reef Sanctuary",
     duration: "2 Hours",
-    price: "$30",
-    rating: 4.7,
-    reviews: 89
+    price: "$40",
+    rating: 4.5,
+    reviews: 56
   },
   {
     id: 8,
@@ -95,9 +95,9 @@ export const tours: Tour[] = [
     title: "Tiran Island Yacht Excursion",
     location: "Sharm Coastline",
     duration: "9 Hours",
-    price: "$50",
-    rating: 4.9,
-    reviews: 204
+    price: "$35",
+    rating: 4.5,
+    reviews: 56
   },
   {
     id: 9,
@@ -106,9 +106,9 @@ export const tours: Tour[] = [
     title: "Cairo & Pyramids Discovery",
     location: "Giza Plateau, Cairo",
     duration: "24 Hours",
-    price: "$110",
-    rating: 4.8,
-    reviews: 312
+    price: "$55",
+    rating: 4.5,
+    reviews: 56
   },
   {
     id: 10,
@@ -117,9 +117,9 @@ export const tours: Tour[] = [
     title: "Mount Moses & St. Catherine",
     location: "Sinai Holy Mountains",
     duration: "17 Hours",
-    price: "$45",
-    rating: 4.6,
-    reviews: 142
+    price: "$30",
+    rating: 4.5,
+    reviews: 56
   },
   {
     id: 11,
@@ -128,9 +128,9 @@ export const tours: Tour[] = [
     title: "Bathyscaphe Submarine View",
     location: "Sharm Underwater Park",
     duration: "2 Hours",
-    price: "$40",
+    price: "$30",
     rating: 4.5,
-    reviews: 118
+    reviews: 56
   },
   {
     id: 12,
@@ -139,9 +139,9 @@ export const tours: Tour[] = [
     title: "St. Catherine's Monastery",
     location: "Heritage Landmark",
     duration: "10 Hours",
-    price: "$35",
-    rating: 4.7,
-    reviews: 95
+    price: "$30",
+    rating: 4.5,
+    reviews: 56
   },
   {
     id: 13,
@@ -150,9 +150,9 @@ export const tours: Tour[] = [
     title: "Colored Canyon Salama 5-in-1",
     location: "Nuiba Natural Canyons",
     duration: "9 Hours",
-    price: "$55",
-    rating: 4.8,
-    reviews: 176
+    price: "$25",
+    rating: 4.5,
+    reviews: 56
   },
   {
     id: 14,
@@ -161,9 +161,9 @@ export const tours: Tour[] = [
     title: "Buggy Safari & Camel Trek",
     location: "Sinai Desert Peaks",
     duration: "2.5 Hours",
-    price: "$35",
-    rating: 4.9,
-    reviews: 220
+    price: "$25",
+    rating: 4.5,
+    reviews: 56
   },
   {
     id: 15,
@@ -172,9 +172,9 @@ export const tours: Tour[] = [
     title: "Dahab Discovery Special",
     location: "Blue Hole Lagoon",
     duration: "9 Hours",
-    price: "$45",
-    rating: 4.7,
-    reviews: 134
+    price: "$15",
+    rating: 4.5,
+    reviews: 56
   },
   {
     id: 16,
@@ -183,9 +183,9 @@ export const tours: Tour[] = [
     title: "Cairo & Pyramids by Plane",
     location: "Ancient World Wonders",
     duration: "17 Hours",
-    price: "$220",
-    rating: 4.9,
-    reviews: 415
+    price: "$210",
+    rating: 4.5,
+    reviews: 56
   },
   {
     id: 17,
@@ -194,9 +194,9 @@ export const tours: Tour[] = [
     title: "Super Safari Dinner & Show",
     location: "Bedouin Nights Village",
     duration: "5 Hours",
-    price: "$30",
-    rating: 4.6,
-    reviews: 280
+    price: "$25",
+    rating: 4.5,
+    reviews: 56
   },
   {
     id: 18,
@@ -206,8 +206,8 @@ export const tours: Tour[] = [
     location: "Sharm Fun Center",
     duration: "7 Hours",
     price: "$45",
-    rating: 4.8,
-    reviews: 198
+    rating: 4.5,
+    reviews: 56
   },
   {
     id: 19,
@@ -216,9 +216,9 @@ export const tours: Tour[] = [
     title: "Luxor Ancient Ruins Trip",
     location: "Upper Egypt Heritage",
     duration: "17 Hours",
-    price: "$130",
-    rating: 4.7,
-    reviews: 245
+    price: "$235",
+    rating: 4.5,
+    reviews: 56
   },
   {
     id: 20,
@@ -227,9 +227,9 @@ export const tours: Tour[] = [
     title: "Parasailing High Experience",
     location: "Red Sea Coast",
     duration: "1.5 Hours",
-    price: "$25",
-    rating: 4.8,
-    reviews: 165
+    price: "$30",
+    rating: 4.5,
+    reviews: 56
   },
   {
     id: 21,
@@ -238,9 +238,9 @@ export const tours: Tour[] = [
     title: "Petra Treasury - Jordan",
     location: "Ancient Rose City",
     duration: "24 Hours",
-    price: "$280",
-    rating: 4.9,
-    reviews: 310
+    price: "$210",
+    rating: 4.5,
+    reviews: 56
   },
   {
     id: 22,
@@ -249,9 +249,9 @@ export const tours: Tour[] = [
     title: "Turkish Bath & Massage",
     location: "Sharm Relaxation Spa",
     duration: "2.5 Hours",
-    price: "$30",
+    price: "$35",
     rating: 4.5,
-    reviews: 88
+    reviews: 56
   },
   {
     id: 23,
@@ -261,8 +261,8 @@ export const tours: Tour[] = [
     location: "Sharm Dolphin Park",
     duration: "1.5 Hours",
     price: "$20",
-    rating: 4.7,
-    reviews: 215
+    rating: 4.5,
+    reviews: 56
   },
   {
     id: 24,
@@ -271,8 +271,8 @@ export const tours: Tour[] = [
     title: "Swimming with Dolphins",
     location: "Marine Life Lagoon",
     duration: "2 Hours",
-    price: "$80",
-    rating: 4.9,
-    reviews: 340
+    price: "$70",
+    rating: 4.5,
+    reviews: 56
   }
 ];
